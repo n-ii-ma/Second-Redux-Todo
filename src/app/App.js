@@ -1,14 +1,18 @@
-import Form from "../components/Form";
+import RemainingTasks from "../features/remainingTasks/RemainingTasks";
 import TaskList from "../components/TaskList";
+import Form from "../components/Form";
 import "../App.css";
 
 function App() {
   return (
-    <div className="todo-container">
-      <header className="header">Add Tasks</header>
-      <TaskList />
-      <Form />
-    </div>
+    <main className="parent-container">
+      <div className="todo-container">
+        <RemainingTasks />
+        <TaskList />
+        <Form />
+      </div>
+      <footer>&copy; All Rights Reserved</footer>
+    </main>
   );
 }
 
