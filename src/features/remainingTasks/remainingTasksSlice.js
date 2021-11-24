@@ -11,7 +11,7 @@ const remainingTasksSlice = createSlice({
 });
 
 // Selectors
-export const selectRemainingTasksSlice = (state) => state.remainingTasksReducer;
+export const selectRemainingTasksSlice = (state) => state.remainingTasks;
 
 // Actions
 export const { updateRemainingTasks } = remainingTasksSlice.actions;
