@@ -13,6 +13,8 @@ const Form = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    if (!input) return;
+
     dispatch(addTask(input));
 
     setInput("");
