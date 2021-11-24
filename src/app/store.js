@@ -8,8 +8,8 @@ const preloadedState = localStorage.getItem("reduxTasks")
 
 const store = configureStore({
   reducer: {
-    taskReducer,
-    remainingTasksReducer,
+    task: taskReducer,
+    remainingTasks: remainingTasksReducer,
   },
   preloadedState,
 });
