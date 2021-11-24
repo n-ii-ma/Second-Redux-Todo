@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Address
 
-//www
+https://second-redux-todo.netlify.app
 
 ## Available Scripts
 
