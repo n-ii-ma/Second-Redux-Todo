@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import {
   selectRemainingTasksSlice,
@@ -10,11 +11,13 @@ const RemainingTasks = () => {
   const remainingTasksSlice = useSelector(selectRemainingTasksSlice);
   const taskSlice = useSelector(selectTaskSlice);
 
-  // Number of Incomplete Tasks
-  const incompleteTasks = taskSlice.filter((task) => !task.completed).length;
+  useEffect(() => {
+    // Number of Incomplete Tasks
+    const incompleteTasks = taskSlice.filter((task) => !task.completed).length;
 
-  // Update the State of the Remaining Tasks
-  dispatch(updateRemainingTasks(incompleteTasks));
+    // Update the State of the Remaining Tasks
+    dispatch(updateRemainingTasks(incompleteTasks));
+  }, [taskSlice, dispatch]);
 
   return (
     <div>
